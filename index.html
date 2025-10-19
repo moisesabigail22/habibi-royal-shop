@@ -8,7 +8,7 @@
         :root {
             --primary: #8B4513;
             --secondary: #F5F5DC;
-            --accent: #DAA520;
+            --accent: #6A0DAD; /* Morado oscuro atractivo */
             --text: #333;
             --light-text: #666;
             --border: #ddd;
@@ -75,7 +75,7 @@
         
         .logo-sub {
             font-size: 1.1rem;
-            color: var(--accent);
+            color: var(--accent); /* Ahora usa el morado */
             font-weight: 500;
             letter-spacing: 1px;
         }
@@ -134,21 +134,22 @@
         }
         
         .admin-btn {
-            background: var(--accent);
-            color: var(--text);
+            background: var(--accent); /* Ahora usa el morado */
+            color: white; /* Texto blanco para mejor contraste */
             border: none;
             padding: 10px 15px;
             border-radius: 50px;
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4);
             transition: all 0.3s;
         }
         
         .admin-btn:hover {
             transform: scale(1.05);
-            background: #e6cf00;
+            background: #5A0B9C; /* Morado un poco más oscuro al hover */
+            box-shadow: 0 6px 20px rgba(106, 13, 173, 0.6);
         }
         
         .section {
@@ -229,12 +230,12 @@
         }
         
         .btn-accent {
-            background-color: var(--accent);
-            color: var(--text);
+            background-color: var(--accent); /* Ahora usa el morado */
+            color: white; /* Texto blanco para mejor contraste */
         }
         
         .btn-accent:hover {
-            background-color: #e6cf00;
+            background-color: #5A0B9C; /* Morado un poco más oscuro al hover */
         }
         
         .btn-success {
