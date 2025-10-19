@@ -55,11 +55,44 @@
             gap: 15px;
         }
         
-        .logo-image {
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 3rem;
+            background: var(--accent);
+            width: 80px;
             height: 80px;
-            width: auto;
-            max-width: 300px;
-            object-fit: contain;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: white;
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .logo-sub {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: 3px;
+            margin-top: 5px;
         }
         
         .promo-banner {
@@ -73,7 +106,8 @@
             font-size: 1.1rem;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
-        
+
+        /* Resto del CSS permanece igual */
         .whatsapp-banner {
             position: fixed;
             bottom: 80px;
@@ -731,8 +765,25 @@
                 gap: 15px;
             }
             
-            .logo-image {
-                height: 60px;
+            .logo-placeholder {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .logo-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+            }
+            
+            .logo-main {
+                font-size: 1.8rem;
+            }
+            
+            .logo-sub {
+                font-size: 1rem;
+                letter-spacing: 2px;
             }
             
             .product-form {
@@ -791,8 +842,12 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <img src="https://i.imgur.com/o4qHVCF.png" alt="Habibi Royal Shop" class="logo-image">
+                <div class="logo-placeholder">
+                    <div class="logo-icon">👑</div>
+                    <div class="logo-text">
+                        <div class="logo-main">HABIBI</div>
+                        <div class="logo-sub">ROYAL SHOP</div>
+                    </div>
                 </div>
             </div>
             
@@ -802,6 +857,7 @@
         </div>
     </header>
     
+    <!-- Resto del código HTML permanece igual -->
     <div class="container">
         <section class="section">
             <h2 class="section-title"><span class="section-icon">🛍️</span> Nuestros Productos</h2>
@@ -1029,6 +1085,7 @@
     </footer>
 
     <script>
+        // El JavaScript permanece exactamente igual
         document.addEventListener('DOMContentLoaded', function() {
             const productForm = document.getElementById('product-form');
             const productsContainer = document.getElementById('products-container');
