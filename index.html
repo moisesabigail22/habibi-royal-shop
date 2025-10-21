@@ -6,7 +6,7 @@
     <title>Habibi Royal Shop</title>
     <style>
         :root {
-            --primary: #6A0DAD; /* Morado principal */
+            --primary: #6A0DAD;
             --secondary: #F5F5DC;
             --accent: #DAA520;
             --text: #333;
@@ -37,7 +37,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary), #5A0B9C); /* Morado degradado */
+            background: linear-gradient(135deg, var(--primary), #5A0B9C);
             color: white;
             padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -90,6 +90,58 @@
             font-weight: bold;
             font-size: 1.1rem;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Filtros y categorías */
+        .categories-filter {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .subcategories {
+            display: flex;
+            gap: 8px;
+            margin: 10px 0 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            display: none;
+        }
+        
+        .subcategory-btn {
+            background: #f0e6ff;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .subcategory-btn:hover,
+        .subcategory-btn.active {
+            background: var(--primary);
+            color: white;
         }
 
         .whatsapp-banner {
@@ -163,7 +215,7 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid var(--secondary);
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -171,7 +223,7 @@
         
         .section-icon {
             font-size: 1.5rem;
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
         }
         
         .product-form {
@@ -214,7 +266,7 @@
         }
         
         .btn {
-            background-color: var(--primary); /* Ahora morado */
+            background-color: var(--primary);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -226,7 +278,7 @@
         }
         
         .btn:hover {
-            background-color: #5A0B9C; /* Morado más oscuro */
+            background-color: #5A0B9C;
         }
         
         .btn-accent {
@@ -325,12 +377,22 @@
         
         .product-category {
             display: inline-block;
-            background: #f0e6ff; /* Fondo morado claro */
-            color: var(--primary); /* Texto morado */
+            background: #f0e6ff;
+            color: var(--primary);
             padding: 3px 8px;
             border-radius: 20px;
             font-size: 0.75rem;
             margin-bottom: 8px;
+        }
+        
+        .product-subcategory {
+            display: inline-block;
+            background: #e6ffed;
+            color: var(--success);
+            padding: 2px 6px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            margin-left: 5px;
         }
         
         .contact-info {
@@ -348,7 +410,7 @@
         
         .contact-card h3 {
             margin-bottom: 10px;
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -356,7 +418,7 @@
         
         .contact-icon {
             font-size: 1.2rem;
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
         }
         
         .vendedor-info {
@@ -371,7 +433,7 @@
         
         .vendedor-icon {
             font-size: 1.1rem;
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
         }
         
         .delivery-zones {
@@ -426,11 +488,11 @@
         }
         
         .welcome-message {
-            background: linear-gradient(135deg, #f0e6ff, #e6d6ff); /* Degradado morado claro */
+            background: linear-gradient(135deg, #f0e6ff, #e6d6ff);
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
-            border-left: 4px solid var(--primary); /* Borde morado */
+            border-left: 4px solid var(--primary);
             font-size: 0.9rem;
         }
         
@@ -456,7 +518,7 @@
             padding: 20px;
             border-radius: 12px;
             width: 90%;
-            max-width: 600px;
+            max-width: 800px;
             max-height: 85vh;
             overflow-y: auto;
         }
@@ -491,7 +553,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary), #5A0B9C); /* Degradado morado */
+            background: linear-gradient(90deg, var(--primary), #5A0B9C);
         }
         
         .login-header {
@@ -503,7 +565,7 @@
             font-size: 2.5rem;
             margin-bottom: 10px;
             display: block;
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
         }
         
         .login-title {
@@ -542,10 +604,10 @@
         }
         
         .login-input:focus {
-            border-color: var(--primary); /* Ahora morado */
+            border-color: var(--primary);
             background-color: white;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.1); /* Sombra morada */
+            box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.1);
         }
         
         .password-container {
@@ -566,7 +628,7 @@
         }
         
         .toggle-password:hover {
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
         }
         
         .login-btn {
@@ -581,15 +643,15 @@
         }
         
         .login-btn-primary {
-            background: linear-gradient(135deg, var(--primary), #5A0B9C); /* Degradado morado */
+            background: linear-gradient(135deg, var(--primary), #5A0B9C);
             color: white;
             margin-bottom: 10px;
-            box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4); /* Sombra morada */
+            box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4);
         }
         
         .login-btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(106, 13, 173, 0.5); /* Sombra morada */
+            box-shadow: 0 6px 20px rgba(106, 13, 173, 0.5);
         }
         
         .login-btn-secondary {
@@ -610,7 +672,7 @@
         }
         
         .login-footer a {
-            color: var(--primary); /* Ahora morado */
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
         }
@@ -702,12 +764,22 @@
         
         .product-detail-category {
             display: inline-block;
-            background: #f0e6ff; /* Fondo morado claro */
-            color: var(--primary); /* Texto morado */
+            background: #f0e6ff;
+            color: var(--primary);
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
+        }
+        
+        .product-detail-subcategory {
+            display: inline-block;
+            background: #e6ffed;
+            color: var(--success);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-left: 8px;
         }
         
         .product-detail-title {
@@ -744,6 +816,126 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+        }
+        
+        /* Estilos para el enlace de Mercado Libre */
+        .mercadolibre-link {
+            display: inline-block;
+            background: #ffe600;
+            color: #2d3277;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 5px;
+            border: 1px solid #ffe600;
+            transition: all 0.3s;
+        }
+        
+        .mercadolibre-link:hover {
+            background: #2d3277;
+            color: #ffe600;
+        }
+        
+        /* Estilos para el formulario de edición */
+        .edit-form {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .edit-form.active {
+            display: block;
+        }
+        
+        .edit-form .form-group {
+            margin-bottom: 10px;
+        }
+        
+        .edit-form .form-group label {
+            font-size: 0.85rem;
+        }
+        
+        .edit-form .form-group input,
+        .edit-form .form-group textarea,
+        .edit-form .form-group select {
+            font-size: 0.85rem;
+            padding: 8px;
+        }
+        
+        .edit-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .edit-actions .btn {
+            flex: 1;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+        }
+        
+        /* Estilos para la sección de categorías personalizadas */
+        .custom-categories-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 10px;
+            border: 2px dashed var(--primary);
+        }
+        
+        .category-management {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .category-form, .subcategory-form {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .categories-list {
+            margin-top: 20px;
+        }
+        
+        .category-item {
+            background: white;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .category-name {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .category-subcategories {
+            margin-top: 5px;
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+        
+        .category-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .category-actions .btn {
+            padding: 5px 10px;
+            font-size: 0.8rem;
         }
         
         @media (max-width: 768px) {
@@ -819,6 +1011,10 @@
             .product-detail-price {
                 font-size: 1.7rem;
             }
+            
+            .category-management {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -847,7 +1043,18 @@
             
             <div class="welcome-message">
                 <h3>¡Bienvenido a Habibi Royal Shop!</h3>
-                <p>Explora nuestros productos y contáctanos para realizar tu pedido. <strong>¡Paga solo el 50% al pedir y el resto al recibir!</strong></p>
+                <p>Explora nuestros productos organizados por categorías y contáctanos para realizar tu pedido. <strong>¡Paga solo el 50% al pedir y el resto al recibir!</strong></p>
+            </div>
+
+            <!-- Filtros por categorías -->
+            <div class="categories-filter" id="categoriesFilter">
+                <button class="category-btn active" data-category="all">Todos los Productos</button>
+                <!-- Las categorías se generarán dinámicamente -->
+            </div>
+
+            <!-- Subcategorías -->
+            <div class="subcategories" id="subcategoriesFilter">
+                <!-- Las subcategorías se generarán dinámicamente -->
             </div>
             
             <div class="products-grid" id="products-container">
@@ -1006,7 +1213,52 @@
             
             <div class="welcome-message">
                 <h3>Bienvenido, Administrador</h3>
-                <p>Gestiona tus productos desde aquí.</p>
+                <p>Gestiona tus productos y categorías desde aquí.</p>
+            </div>
+            
+            <!-- Sección para crear categorías personalizadas -->
+            <div class="custom-categories-section">
+                <h3 class="section-title"><span class="section-icon">📂</span> Gestión de Categorías Personalizadas</h3>
+                
+                <div class="category-management">
+                    <div class="category-form">
+                        <h4>Crear Nueva Categoría</h4>
+                        <form id="category-form">
+                            <div class="form-group">
+                                <label for="new-category-name">Nombre de Categoría</label>
+                                <input type="text" id="new-category-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="new-category-icon">Icono (opcional)</label>
+                                <input type="text" id="new-category-icon" placeholder="Ejemplo: 🕐">
+                                <small style="color: var(--light-text); font-size: 0.8rem;">Puedes usar emojis o texto</small>
+                            </div>
+                            <button type="submit" class="btn btn-success">➕ Agregar Categoría</button>
+                        </form>
+                    </div>
+                    
+                    <div class="subcategory-form">
+                        <h4>Agregar Subcategoría</h4>
+                        <form id="subcategory-form">
+                            <div class="form-group">
+                                <label for="parent-category">Categoría Padre</label>
+                                <select id="parent-category" required>
+                                    <option value="">Selecciona una categoría</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="new-subcategory-name">Nombre de Subcategoría</label>
+                                <input type="text" id="new-subcategory-name" required>
+                            </div>
+                            <button type="submit" class="btn btn-accent">➕ Agregar Subcategoría</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="categories-list" id="custom-categories-list">
+                    <h4>Categorías Creadas</h4>
+                    <!-- Las categorías personalizadas se mostrarán aquí -->
+                </div>
             </div>
             
             <form id="product-form" class="product-form">
@@ -1021,14 +1273,40 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="product-category">Categoría</label>
-                    <select id="product-category">
-                        <option value="electronics">Electrónicos</option>
-                        <option value="home">Hogar</option>
-                        <option value="clothing">Ropa</option>
-                        <option value="sports">Deportes</option>
-                        <option value="beauty">Belleza</option>
-                        <option value="other">Otros</option>
+                    <label for="product-category">Categoría Principal</label>
+                    <select id="product-category" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="relojes">Relojes 🕐</option>
+                        <option value="electronica">Electrónica 📱</option>
+                        <option value="ropa">Ropa 👕</option>
+                        <option value="calzado">Calzado 👟</option>
+                        <option value="accesorios">Accesorios 🎒</option>
+                        <option value="hogar">Hogar 🏠</option>
+                        <option value="deportes">Deportes ⚽</option>
+                        <option value="belleza">Belleza 💄</option>
+                        <option value="juguetes">Juguetes 🧸</option>
+                        <option value="otros">Otros 📦</option>
+                        <!-- Las categorías personalizadas se agregarán aquí dinámicamente -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-subcategory">Subcategoría</label>
+                    <select id="product-subcategory">
+                        <option value="">Sin subcategoría</option>
+                        <!-- Las opciones se llenarán dinámicamente según la categoría -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-gender">Género</label>
+                    <select id="product-gender">
+                        <option value="">Sin género específico</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="niño">Niño</option>
+                        <option value="niña">Niña</option>
+                        <option value="unisex">Unisex</option>
                     </select>
                 </div>
                 
@@ -1041,6 +1319,13 @@
                     <label for="product-image">Imagen (URL)</label>
                     <input type="url" id="product-image" placeholder="https://ejemplo.com/imagen.jpg">
                     <small style="color: var(--light-text); font-size: 0.8rem;">Pega aquí la URL de la imagen del producto</small>
+                </div>
+                
+                <!-- Nuevo campo para enlace de Mercado Libre -->
+                <div class="form-group full-width">
+                    <label for="product-mercadolibre">Enlace de Mercado Libre (solo para admin)</label>
+                    <input type="url" id="product-mercadolibre" placeholder="https://articulo.mercadolibre.com/...">
+                    <small style="color: var(--light-text); font-size: 0.8rem;">Enlace de referencia para el administrador</small>
                 </div>
                 
                 <div class="form-group full-width">
@@ -1068,34 +1353,368 @@
     </footer>
 
     <script>
+        // Sistema de categorías y subcategorías
+        const categorySystem = {
+            'relojes': ['Deportivos', 'Elegantes', 'Inteligentes', 'Casuales', 'Lujo'],
+            'electronica': ['Smartphones', 'Tablets', 'Laptops', 'Audífonos', 'Cámaras'],
+            'ropa': ['Camisas', 'Pantalones', 'Vestidos', 'Chaquetas', 'Ropa Interior'],
+            'calzado': ['Deportivos', 'Formales', 'Casuales', 'Sandalias', 'Botas'],
+            'accesorios': ['Bolsos', 'Cinturones', 'Gafas', 'Joyeria', 'Sombreros'],
+            'hogar': ['Decoración', 'Cocina', 'Baño', 'Jardín', 'Iluminación'],
+            'deportes': ['Fútbol', 'Béisbol', 'Natación', 'Gimnasio', 'Ciclismo'],
+            'belleza': ['Maquillaje', 'Cuidado Facial', 'Perfumes', 'Cuidado Cabello', 'Uñas'],
+            'juguetes': ['Educativos', 'Electrónicos', 'Muñecas', 'Carros', 'Rompecabezas'],
+            'otros': ['Variados']
+        };
+
+        // Cargar categorías personalizadas desde localStorage
+        let customCategories = JSON.parse(localStorage.getItem('customCategories')) || {};
+
         document.addEventListener('DOMContentLoaded', function() {
             const productForm = document.getElementById('product-form');
+            const categoryForm = document.getElementById('category-form');
+            const subcategoryForm = document.getElementById('subcategory-form');
             const productsContainer = document.getElementById('products-container');
             const adminProductsContainer = document.getElementById('admin-products-container');
             const emptyState = document.getElementById('empty-state');
             const adminEmptyState = document.getElementById('admin-empty-state');
+            const categoriesFilter = document.getElementById('categoriesFilter');
+            const subcategoriesFilter = document.getElementById('subcategoriesFilter');
+            const categorySelect = document.getElementById('product-category');
+            const subcategorySelect = document.getElementById('product-subcategory');
+            const parentCategorySelect = document.getElementById('parent-category');
+            const customCategoriesList = document.getElementById('custom-categories-list');
             
             let products = JSON.parse(localStorage.getItem('products')) || [];
+            let currentCategory = 'all';
+            let currentSubcategory = 'all';
+            let editingProductId = null;
             
+            // Inicializar categorías
+            initializeCategories();
             renderProducts();
+            updateParentCategorySelect();
+            renderCustomCategoriesList();
+            
+            // Event listener para cambio de categoría en el formulario
+            categorySelect.addEventListener('change', function() {
+                updateSubcategoryOptions(this.value);
+            });
+            
+            // Formulario para crear categorías personalizadas
+            categoryForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const categoryName = document.getElementById('new-category-name').value;
+                const categoryIcon = document.getElementById('new-category-icon').value || '📦';
+                
+                if (categoryName) {
+                    // Crear nueva categoría
+                    const categoryKey = categoryName.toLowerCase().replace(/\s+/g, '_');
+                    customCategories[categoryKey] = {
+                        name: categoryName,
+                        icon: categoryIcon,
+                        subcategories: []
+                    };
+                    
+                    // Guardar en localStorage
+                    localStorage.setItem('customCategories', JSON.stringify(customCategories));
+                    
+                    // Actualizar interfaz
+                    updateCategorySelect();
+                    updateParentCategorySelect();
+                    renderCustomCategoriesList();
+                    
+                    // Limpiar formulario
+                    categoryForm.reset();
+                    
+                    alert(`✅ Categoría "${categoryName}" creada correctamente!`);
+                }
+            });
+            
+            // Formulario para agregar subcategorías
+            subcategoryForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const parentCategory = document.getElementById('parent-category').value;
+                const subcategoryName = document.getElementById('new-subcategory-name').value;
+                
+                if (parentCategory && subcategoryName) {
+                    // Agregar subcategoría
+                    if (customCategories[parentCategory]) {
+                        customCategories[parentCategory].subcategories.push(subcategoryName);
+                    } else if (categorySystem[parentCategory]) {
+                        categorySystem[parentCategory].push(subcategoryName);
+                    }
+                    
+                    // Guardar en localStorage
+                    localStorage.setItem('customCategories', JSON.stringify(customCategories));
+                    
+                    // Actualizar interfaz
+                    updateParentCategorySelect();
+                    renderCustomCategoriesList();
+                    
+                    // Limpiar formulario
+                    subcategoryForm.reset();
+                    
+                    alert(`✅ Subcategoría "${subcategoryName}" agregada correctamente!`);
+                }
+            });
+            
+            function updateSubcategoryOptions(category) {
+                subcategorySelect.innerHTML = '<option value="">Sin subcategoría</option>';
+                
+                if (category && (categorySystem[category] || customCategories[category])) {
+                    const subcategories = categorySystem[category] || customCategories[category].subcategories;
+                    
+                    subcategories.forEach(subcat => {
+                        const option = document.createElement('option');
+                        option.value = subcat.toLowerCase();
+                        option.textContent = subcat;
+                        subcategorySelect.appendChild(option);
+                    });
+                }
+            }
+            
+            function updateCategorySelect() {
+                // Limpiar opciones existentes (excepto las predeterminadas)
+                const defaultOptions = categorySelect.querySelectorAll('option[value]:not([value=""])');
+                defaultOptions.forEach(option => option.remove());
+                
+                // Agregar categorías predeterminadas
+                Object.keys(categorySystem).forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category;
+                    option.textContent = getCategoryDisplayName(category);
+                    categorySelect.appendChild(option);
+                });
+                
+                // Agregar categorías personalizadas
+                Object.keys(customCategories).forEach(categoryKey => {
+                    const category = customCategories[categoryKey];
+                    const option = document.createElement('option');
+                    option.value = categoryKey;
+                    option.textContent = `${category.name} ${category.icon}`;
+                    categorySelect.appendChild(option);
+                });
+            }
+            
+            function updateParentCategorySelect() {
+                parentCategorySelect.innerHTML = '<option value="">Selecciona una categoría</option>';
+                
+                // Agregar categorías predeterminadas
+                Object.keys(categorySystem).forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category;
+                    option.textContent = getCategoryDisplayName(category);
+                    parentCategorySelect.appendChild(option);
+                });
+                
+                // Agregar categorías personalizadas
+                Object.keys(customCategories).forEach(categoryKey => {
+                    const category = customCategories[categoryKey];
+                    const option = document.createElement('option');
+                    option.value = categoryKey;
+                    option.textContent = `${category.name} ${category.icon}`;
+                    parentCategorySelect.appendChild(option);
+                });
+            }
+            
+            function renderCustomCategoriesList() {
+                customCategoriesList.innerHTML = '<h4>Categorías Creadas</h4>';
+                
+                if (Object.keys(customCategories).length === 0) {
+                    customCategoriesList.innerHTML += '<p style="text-align: center; color: var(--light-text); padding: 20px;">No hay categorías personalizadas creadas</p>';
+                    return;
+                }
+                
+                Object.keys(customCategories).forEach(categoryKey => {
+                    const category = customCategories[categoryKey];
+                    const categoryItem = document.createElement('div');
+                    categoryItem.className = 'category-item';
+                    
+                    let subcategoriesHTML = '';
+                    if (category.subcategories.length > 0) {
+                        subcategoriesHTML = `
+                            <div class="category-subcategories">
+                                <strong>Subcategorías:</strong> ${category.subcategories.join(', ')}
+                            </div>
+                        `;
+                    }
+                    
+                    categoryItem.innerHTML = `
+                        <div>
+                            <div class="category-name">${category.name} ${category.icon}</div>
+                            ${subcategoriesHTML}
+                        </div>
+                        <div class="category-actions">
+                            <button class="btn btn-danger" onclick="deleteCustomCategory('${categoryKey}')">🗑️</button>
+                        </div>
+                    `;
+                    
+                    customCategoriesList.appendChild(categoryItem);
+                });
+            }
+            
+            function initializeCategories() {
+                // Limpiar filtros existentes
+                categoriesFilter.innerHTML = '';
+                subcategoriesFilter.innerHTML = '';
+                
+                // Botón "Todos"
+                const allBtn = document.createElement('button');
+                allBtn.className = 'category-btn active';
+                allBtn.textContent = 'Todos los Productos';
+                allBtn.setAttribute('data-category', 'all');
+                allBtn.addEventListener('click', function() {
+                    setActiveCategory('all');
+                });
+                categoriesFilter.appendChild(allBtn);
+                
+                // Botones para cada categoría predeterminada
+                Object.keys(categorySystem).forEach(category => {
+                    const btn = document.createElement('button');
+                    btn.className = 'category-btn';
+                    btn.textContent = getCategoryDisplayName(category);
+                    btn.setAttribute('data-category', category);
+                    btn.addEventListener('click', function() {
+                        setActiveCategory(category);
+                    });
+                    categoriesFilter.appendChild(btn);
+                });
+                
+                // Botones para cada categoría personalizada
+                Object.keys(customCategories).forEach(categoryKey => {
+                    const category = customCategories[categoryKey];
+                    const btn = document.createElement('button');
+                    btn.className = 'category-btn';
+                    btn.textContent = `${category.name} ${category.icon}`;
+                    btn.setAttribute('data-category', categoryKey);
+                    btn.addEventListener('click', function() {
+                        setActiveCategory(categoryKey);
+                    });
+                    categoriesFilter.appendChild(btn);
+                });
+                
+                // Actualizar select de categorías en el formulario
+                updateCategorySelect();
+            }
+            
+            function setActiveCategory(category) {
+                // Actualizar botones de categoría
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelector(`[data-category="${category}"]`).classList.add('active');
+                
+                currentCategory = category;
+                currentSubcategory = 'all';
+                
+                // Mostrar/ocultar subcategorías
+                if (category !== 'all' && (categorySystem[category] || customCategories[category])) {
+                    subcategoriesFilter.style.display = 'flex';
+                    updateSubcategoryFilters(category);
+                } else {
+                    subcategoriesFilter.style.display = 'none';
+                }
+                
+                renderProducts();
+            }
+            
+            function updateSubcategoryFilters(category) {
+                subcategoriesFilter.innerHTML = '';
+                
+                const allSubBtn = document.createElement('button');
+                allSubBtn.className = 'subcategory-btn active';
+                allSubBtn.textContent = 'Todas';
+                allSubBtn.setAttribute('data-subcategory', 'all');
+                allSubBtn.addEventListener('click', function() {
+                    setActiveSubcategory('all');
+                });
+                subcategoriesFilter.appendChild(allSubBtn);
+                
+                const subcategories = categorySystem[category] || customCategories[category].subcategories;
+                
+                subcategories.forEach(subcat => {
+                    const btn = document.createElement('button');
+                    btn.className = 'subcategory-btn';
+                    btn.textContent = subcat;
+                    btn.setAttribute('data-subcategory', subcat.toLowerCase());
+                    btn.addEventListener('click', function() {
+                        setActiveSubcategory(subcat.toLowerCase());
+                    });
+                    subcategoriesFilter.appendChild(btn);
+                });
+            }
+            
+            function setActiveSubcategory(subcategory) {
+                document.querySelectorAll('.subcategory-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelector(`[data-subcategory="${subcategory}"]`).classList.add('active');
+                
+                currentSubcategory = subcategory;
+                renderProducts();
+            }
+            
+            function getCategoryDisplayName(category) {
+                const names = {
+                    'relojes': 'Relojes 🕐',
+                    'electronica': 'Electrónica 📱',
+                    'ropa': 'Ropa 👕',
+                    'calzado': 'Calzado 👟',
+                    'accesorios': 'Accesorios 🎒',
+                    'hogar': 'Hogar 🏠',
+                    'deportes': 'Deportes ⚽',
+                    'belleza': 'Belleza 💄',
+                    'juguetes': 'Juguetes 🧸',
+                    'otros': 'Otros 📦'
+                };
+                return names[category] || category;
+            }
+            
+            function getCategoryName(categoryKey) {
+                if (categorySystem[categoryKey]) {
+                    return getCategoryDisplayName(categoryKey);
+                } else if (customCategories[categoryKey]) {
+                    return `${customCategories[categoryKey].name} ${customCategories[categoryKey].icon}`;
+                }
+                return categoryKey;
+            }
             
             productForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
                 const product = {
-                    id: Date.now(),
+                    id: editingProductId || Date.now(),
                     name: document.getElementById('product-name').value,
                     price: parseFloat(document.getElementById('product-price').value).toFixed(2),
                     category: document.getElementById('product-category').value,
+                    subcategory: document.getElementById('product-subcategory').value,
+                    gender: document.getElementById('product-gender').value,
                     description: document.getElementById('product-description').value,
-                    image: document.getElementById('product-image').value || 'https://via.placeholder.com/300x200?text=Producto+Sin+Imagen'
+                    image: document.getElementById('product-image').value || 'https://via.placeholder.com/300x200?text=Producto+Sin+Imagen',
+                    mercadolibre: document.getElementById('product-mercadolibre').value
                 };
                 
-                products.push(product);
+                if (editingProductId) {
+                    // Actualizar producto existente
+                    const index = products.findIndex(p => p.id === editingProductId);
+                    if (index !== -1) {
+                        products[index] = product;
+                    }
+                    editingProductId = null;
+                    document.querySelector('.product-form button[type="submit"]').textContent = '➕ Agregar Producto';
+                } else {
+                    // Agregar nuevo producto
+                    products.push(product);
+                }
+                
                 localStorage.setItem('products', JSON.stringify(products));
                 renderProducts();
                 productForm.reset();
-                alert('✅ Producto agregado correctamente!');
+                updateSubcategoryOptions('');
+                alert(editingProductId ? '✅ Producto actualizado correctamente!' : '✅ Producto agregado correctamente!');
             });
             
             function renderProducts() {
@@ -1104,17 +1723,35 @@
             }
             
             function renderCustomerProducts() {
-                if (products.length > 0) {
+                const filteredProducts = filterProducts();
+                
+                if (filteredProducts.length > 0) {
                     emptyState.style.display = 'none';
                     productsContainer.innerHTML = '';
                     
-                    products.forEach(product => {
+                    filteredProducts.forEach(product => {
                         const productCard = createProductCard(product, false);
                         productsContainer.appendChild(productCard);
                     });
                 } else {
                     emptyState.style.display = 'block';
+                    productsContainer.innerHTML = '';
+                    productsContainer.appendChild(emptyState);
                 }
+            }
+            
+            function filterProducts() {
+                if (currentCategory === 'all') {
+                    return products;
+                }
+                
+                let filtered = products.filter(product => product.category === currentCategory);
+                
+                if (currentSubcategory !== 'all') {
+                    filtered = filtered.filter(product => product.subcategory === currentSubcategory);
+                }
+                
+                return filtered;
             }
             
             function renderAdminProducts() {
@@ -1134,24 +1771,31 @@
             function createProductCard(product, isAdminView) {
                 const productCard = document.createElement('div');
                 productCard.className = 'product-card';
-                
-                const categoryNames = {
-                    'electronics': 'Electrónicos',
-                    'home': 'Hogar',
-                    'clothing': 'Ropa',
-                    'sports': 'Deportes',
-                    'beauty': 'Belleza',
-                    'other': 'Otros'
-                };
+                productCard.setAttribute('data-category', product.category);
+                if (product.subcategory) {
+                    productCard.setAttribute('data-subcategory', product.subcategory);
+                }
                 
                 let actionsHTML = '';
                 
                 if (isAdminView) {
                     actionsHTML = `
                         <div style="display: flex; gap: 8px; margin-top: 12px;">
+                            <button class="btn" style="flex: 1;" onclick="editProduct(${product.id})">✏️ Editar</button>
                             <button class="btn btn-danger" style="flex: 1;" onclick="deleteProduct(${product.id})">🗑️ Eliminar</button>
                         </div>
                     `;
+                    
+                    // Mostrar enlace de Mercado Libre solo para admin
+                    if (product.mercadolibre) {
+                        actionsHTML += `
+                            <div style="margin-top: 8px;">
+                                <a href="${product.mercadolibre}" class="mercadolibre-link" target="_blank">
+                                    🔗 Ver en Mercado Libre
+                                </a>
+                            </div>
+                        `;
+                    }
                 } else {
                     actionsHTML = `
                         <div class="customer-actions">
@@ -1161,13 +1805,18 @@
                     `;
                 }
                 
+                const genderIcon = product.gender ? getGenderIcon(product.gender) : '';
+                
                 productCard.innerHTML = `
                     <div class="product-image" onclick="openProductModal(${product.id})">
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x200?text=Imagen+No+Disponible'">
                     </div>
                     <div class="product-info">
-                        <div class="product-category">${categoryNames[product.category]}</div>
-                        <div class="product-title">${product.name}</div>
+                        <div>
+                            <span class="product-category">${getCategoryName(product.category)}</span>
+                            ${product.subcategory ? `<span class="product-subcategory">${product.subcategory}</span>` : ''}
+                        </div>
+                        <div class="product-title">${product.name}${genderIcon}</div>
                         <div class="product-price">$${product.price}</div>
                         <div class="product-description">${product.description}</div>
                         ${actionsHTML}
@@ -1177,28 +1826,36 @@
                 return productCard;
             }
             
+            function getGenderIcon(gender) {
+                const icons = {
+                    'hombre': ' 👨',
+                    'mujer': ' 👩',
+                    'niño': ' 👦',
+                    'niña': ' 👧',
+                    'unisex': ' 👥'
+                };
+                return icons[gender] || '';
+            }
+            
             window.openProductModal = function(productId) {
                 const product = products.find(p => p.id === productId);
                 if (!product) return;
                 
-                const categoryNames = {
-                    'electronics': 'Electrónicos',
-                    'home': 'Hogar',
-                    'clothing': 'Ropa',
-                    'sports': 'Deportes',
-                    'beauty': 'Belleza',
-                    'other': 'Otros'
-                };
-                
                 const modalContent = document.getElementById('productDetailContent');
+                const genderIcon = product.gender ? getGenderIcon(product.gender) : '';
+                
                 modalContent.innerHTML = `
                     <div class="product-detail-image">
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/500x400?text=Imagen+No+Disponible'">
                     </div>
                     <div class="product-detail-info">
-                        <div class="product-detail-category">${categoryNames[product.category]}</div>
-                        <h1 class="product-detail-title">${product.name}</h1>
+                        <div>
+                            <span class="product-detail-category">${getCategoryName(product.category)}</span>
+                            ${product.subcategory ? `<span class="product-detail-subcategory">${product.subcategory}</span>` : ''}
+                        </div>
+                        <h1 class="product-detail-title">${product.name}${genderIcon}</h1>
                         <div class="product-detail-price">$${product.price}</div>
+                        ${product.gender ? `<p><strong>Género:</strong> ${product.gender}</p>` : ''}
                         <p class="product-detail-description">${product.description}</p>
                         <div class="product-detail-actions">
                             <button class="btn btn-accent" onclick="contactAboutProduct('${product.name}')">
@@ -1234,7 +1891,6 @@
                 const password = document.getElementById('password').value;
                 const errorMessage = document.getElementById('errorMessage');
                 
-                // Credenciales privadas - solo tú las sabes
                 const validUsername = 'habibi';
                 const validPassword = 'royal123';
                 
@@ -1253,12 +1909,63 @@
                 document.getElementById('adminPanel').classList.remove('active');
             };
             
+            window.editProduct = function(id) {
+                const product = products.find(p => p.id === id);
+                if (!product) return;
+                
+                // Llenar el formulario con los datos del producto
+                document.getElementById('product-name').value = product.name;
+                document.getElementById('product-price').value = product.price;
+                document.getElementById('product-category').value = product.category;
+                updateSubcategoryOptions(product.category);
+                setTimeout(() => {
+                    document.getElementById('product-subcategory').value = product.subcategory || '';
+                }, 100);
+                document.getElementById('product-gender').value = product.gender || '';
+                document.getElementById('product-description').value = product.description;
+                document.getElementById('product-image').value = product.image;
+                document.getElementById('product-mercadolibre').value = product.mercadolibre || '';
+                
+                // Cambiar el texto del botón
+                document.querySelector('.product-form button[type="submit"]').textContent = '💾 Actualizar Producto';
+                
+                // Guardar el ID del producto que estamos editando
+                editingProductId = id;
+                
+                // Desplazar hacia el formulario
+                document.querySelector('.product-form').scrollIntoView({ behavior: 'smooth' });
+            };
+            
             window.deleteProduct = function(id) {
                 if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
                     products = products.filter(product => product.id !== id);
                     localStorage.setItem('products', JSON.stringify(products));
                     renderProducts();
                     alert('Producto eliminado correctamente');
+                }
+            };
+            
+            window.deleteCustomCategory = function(categoryKey) {
+                if (confirm('¿Estás seguro de que quieres eliminar esta categoría? Los productos en esta categoría se mantendrán pero perderán la categoría.')) {
+                    delete customCategories[categoryKey];
+                    localStorage.setItem('customCategories', JSON.stringify(customCategories));
+                    
+                    // Actualizar productos que usaban esta categoría
+                    products.forEach(product => {
+                        if (product.category === categoryKey) {
+                            product.category = 'otros';
+                        }
+                    });
+                    localStorage.setItem('products', JSON.stringify(products));
+                    
+                    // Actualizar interfaz
+                    initializeCategories();
+                    updateCategorySelect();
+                    updateParentCategorySelect();
+                    renderCustomCategoriesList();
+                    renderProducts();
+                    
+                    alert('Categoría eliminada correctamente');
                 }
             };
             
@@ -1293,14 +2000,12 @@
                 closeLoginPanel();
             });
             
-            // Cerrar modal al hacer clic fuera del contenido
             document.getElementById('productModal').addEventListener('click', function(e) {
                 if (e.target === this) {
                     closeProductModal();
                 }
             });
             
-            // Cerrar modal con tecla Escape
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     closeProductModal();
